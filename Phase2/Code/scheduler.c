@@ -171,7 +171,7 @@ void HPF(FILE *fptr, FILE * m)
 void SRTN(FILE *fptr, FILE * m)
 {
     int startTime = -1, currentRemaining = -1, lastUpdate = 0, size = 0;
-    struct process * currentProcess;
+    struct process * currentProcess = NULL;
     //Check if there is another coming process
     while(!finished || (readyQueue.head != NULL) || (waitingQueue.head != NULL))
     {
